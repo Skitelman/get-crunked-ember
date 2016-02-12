@@ -3,11 +3,11 @@
   <p>{{model.description}}</p>
    <footer>{{model.source}}</footer>
 </blockquote>
-<ul>
-{{#each model.proportions as |proportion|}}
-  <li><strong>{{proportion.amount}}</strong> {{proportion.ingredient}}</li>
-{{/each}}
-</ul>
 <p>
   {{model.instructions}}
 </p>
+<ul>
+  {{#each model.proportions as |proportion|}}
+    <li><strong>{{proportion.amount}}</strong> {{proportion.ingredient}}</li>
+  {{/each}}
+</ul>
