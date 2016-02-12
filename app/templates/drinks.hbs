@@ -1,11 +1,11 @@
-{{#each model as |drink|}}
-  <p>{{drink}}</p>
-{{/each}}
-{{#if canShowAddDrink}}
-  <button class="btn btn-default" {{action "hideAddDrink"}}>Hide Form</button><
-  <br><br>
-  {{input value=newDrink enter="addDrink"}}
-{{else}}
-  <button class="btn btn-default" {{action "showAddDrink"}}>Show Form</button>
-{{/if}}
-{{outlet}}
+<div class="row">
+  <div class="col-xs-3">
+    <h3>{{link-to "Add A drink" "drinks.new"}}</h3>
+    {{#each model as |drink|}}
+    <p>{{link-to drink.name "drinks.drink" drink}}</p>
+    {{/each}}
+  </div>
+  <div class="col-xs-9">
+    {{outlet}}
+  </div>
+</div>

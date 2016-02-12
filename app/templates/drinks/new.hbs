@@ -1,0 +1,26 @@
+<form class="form-horizontal" {{action "addDrink" on="submit"}}>
+  <div class="form-group">
+    <label for="drink-name">Name</label>
+    {{input value=model.name class="form-control" id="drink-name"}}
+  </div>
+  <div class="form-group">
+    <label for="drink-description">Description</label>
+    {{input value=model.description class="form-control" id="drink-description"}}
+  </div>
+  <div class="form-group">
+    <label for="drink-instructions">Instructions</label>
+    {{input value=model.instructions class="form-control" id="drink-instructions"}}
+  </div>
+  <div class="form-group">
+    <label for="drink-source">Source</label>
+    {{input value=model.source class="form-control" id="drink-source"}}
+  </div>
+  <!-- <button type="button" {{action "addIngredient"}}>+</button>
+  {{#each model.proportions as |proportion|}}
+    <div class="form-group">
+      {{input value=proportion.amount class="form-control" placeholder="1 cup"}}
+      {{input value=proportion.ingredient class="form-control" placeholder="Vodka"}}
+    </div>
+  {{/each}} -->
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
